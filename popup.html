@@ -13,6 +13,7 @@
     <script src="min/jquery.sweet-modal.min.js"></script>
 </head>
 <body>
+    <div class="container">
     <table class="table table-responsive">
         <tr>
             <td>Soft Computing Solution</td>
@@ -32,7 +33,7 @@
     <div class="col col-md-4">
         <div class="card">
             <div class="card-body">
-                <img class="img-fluid" src="Tagore.jpg" width="100%" onclick="showimg('Tagore.jpg')">
+                <img class="img-fluid" src="Tagore2.jpg" width="100%" onclick="showimg('Tagore2.jpg')">
             </div>
         </div>
     </div>
@@ -40,12 +41,12 @@
     <div class="col col-md-4">
         <div class="card">
             <div class="card-body">
-                <a href="Tagore.jpg" download><img class="img-fluid" src="Tagore.jpg" width="100%"></a>
+                <img class="img-fluid" src="Tagore3.jpg" width="100%" onclick="showimg('Tagore3.jpg')">
             </div>
         </div>
     </div>
     </div>
-    
+</div>
 </body>
 <script>
     function show(file_name){
@@ -56,12 +57,12 @@
         });
         
     }
-    // function showimg(file_name){
-    //     $.sweetModal({
-    //         title: 'PDF Content',
-    //         content: '<img src="'+file_name+'" width="100%" height="700"/>',
-    //     });
+    function showimg(file_name){
+         $.sweetModal({
+             title: 'Image Content',
+             content: '<a class="btn btn-secondary"style="float:right" href="'+file_name+'" download="Tagore.jpg"><i class="fa fa-download"></i> Download</a>'+'<img src="'+file_name+'" width="100%" height="700"/>',
+         });
         
-    // }
+     }
 </script>
 </html>
